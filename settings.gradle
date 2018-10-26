@@ -1,0 +1,1 @@
+include ':sample', ':sqlitestudioservice', ':sqlitestudioservice_stub'

@@ -1,0 +1,55 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+}
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'sqlitestudioservice'
+
+    publishedGroupId = 'ru.digipeople.database'
+    libraryName = 'sqlitestudioservice'
+    artifact = 'sqlitestudioservice'
+
+    libraryDescription = "Tool for remote connection to database using SQLiteStudio"
+
+    siteUrl = "https://github.com/DigiPeopleInc/SQLiteStudioService"
+    gitUrl = "https://github.com/DigiPeopleInc/SQLiteStudioService"
+
+    libraryVersion = '1.0.0'
+
+    developerId = null
+    developerName = null
+    developerEmail = null
+
+    licenseName = null
+    licenseUrl = null
+    allLicenses = ["Apache-2.0"]
+}
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
