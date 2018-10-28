@@ -24,32 +24,15 @@ android {
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation files('libs/SQLiteStudioRemote.jar')
 }
 
 ext {
-    bintrayRepo = 'maven'
-    bintrayName = 'sqlitestudioservice'
-
-    publishedGroupId = 'ru.digipeople.database'
-    libraryName = 'sqlitestudioservice'
-    artifact = 'sqlitestudioservice'
-
-    libraryDescription = "Tool for remote connection to database using SQLiteStudio"
-
-    siteUrl = "https://github.com/DigiPeopleInc/SQLiteStudioService"
-    gitUrl = "https://github.com/DigiPeopleInc/SQLiteStudioService"
-
-    libraryVersion = '1.0.0'
-
-    developerId = null
-    developerName = null
-    developerEmail = null
-
-    licenseName = null
-    licenseUrl = null
-    allLicenses = ["Apache-2.0"]
+    publishGroupId = 'ru.digipeople.database'
+    publishArtifactId = 'sqlitestudioservice'
+    publishVersion = '1.0.0'
+    publishDesc = "Tool for remote connection to database using SQLiteStudio"
+    publishVcsUrl = "https://github.com/DigiPeopleInc/SQLiteStudioService"
 }
 
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+apply from: 'https://raw.githubusercontent.com/DigiPeopleInc/Bintray/master/publish_v1.gradle'

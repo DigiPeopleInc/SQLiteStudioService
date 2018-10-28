@@ -4,12 +4,13 @@ import android.content.Context;
 
 /**
  * Tool for remote connection to database using SQLiteStudio.
+ * Stub implementation for release build.
  *
  * @author Aleksandr Brazhkin
  */
-public class SQLiteConnectionService {
+public class SQLiteStudioService {
 
-    public SQLiteConnectionService(Context context, int servicePort) {
+    public SQLiteStudioService(Context context, int servicePort) {
         // nop
     }
 
